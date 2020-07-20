@@ -3,7 +3,7 @@
   and how it should behave afterwards
 */
 
-import { app, protocol, BrowserWindow, ipcMain } from 'electron'
+import { app, protocol, BrowserWindow, ipcMain, nativeTheme } from 'electron'
 import { createProtocol } from 'vue-cli-plugin-electron-builder/lib'
 import installExtension, { VUEJS_DEVTOOLS } from 'electron-devtools-installer'
 const isDevelopment = process.env.NODE_ENV !== 'production'
@@ -81,4 +81,14 @@ app.on('ready', async () => {
 // return app version number when asked
 ipcMain.on('get-version-number', (e) => {
   e.returnValue = process.env.npm_package_version
+})
+
+// returns the os theme when asked
+ipcMain.on('get-os-theme', (e) => {
+  e.returnValue = nativeTheme.shouldUseDarkColors ? 'dark' : 'light'
+})
+
+// send event when os changes theme
+nativeTheme.on('updated', () => {
+  win.webContents.send('os-theme-updated', nativeTheme.shouldUseDarkColors ? 'dark' : 'light')
 })
