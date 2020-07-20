@@ -1,5 +1,5 @@
 /*
-  This file controls how to window should be created,
+  This file controls how the window should be created,
   and how it should behave afterwards
 */
 
@@ -45,16 +45,12 @@ function createWindow() {
     win.loadURL('graphit://./index.html')
   }
 
-  win.on('closed', () => {
-    win = null
-  })
+  win.on('closed', () => win = null)
 
-  win.on('ready-to-show', () => {
-    win.show()
-  })
+  win.on('ready-to-show', () => win.show())
 }
 
-// quit when all windows are closed (except on macOS)
+// quit once all windows are closed (except on macOS)
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
     app.quit()
@@ -70,14 +66,15 @@ app.on('activate', () => {
 
 // executed once electron is ready to start
 app.on('ready', async () => {
+  // install Vue Devtools
   if (isDevelopment && !process.env.IS_TEST) {
-    // install Vue Devtools
     try {
       await installExtension(VUEJS_DEVTOOLS)
     } catch (e) {
       console.error('Vue Devtools failed to install:', e.toString())
     }
   }
+  // create a new window
   createWindow()
 })
 
