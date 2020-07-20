@@ -92,3 +92,18 @@ ipcMain.on('get-os-theme', (e) => {
 nativeTheme.on('updated', () => {
   win.webContents.send('os-theme-updated', nativeTheme.shouldUseDarkColors ? 'dark' : 'light')
 })
+
+// minimize the window when asked to
+ipcMain.on('minimize-window', () => {
+  win.minimize()
+})
+
+// maximize the window when asked to
+ipcMain.on('maximize-window', () => {
+  win.maximize()
+})
+
+// close the window when asked to
+ipcMain.on('close-window', () => {
+  win.close()
+})
