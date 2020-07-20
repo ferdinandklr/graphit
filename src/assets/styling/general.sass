@@ -2,6 +2,7 @@
   --default-border-radius: 10px
   --small-border-radius: 4px
 
+  --faster-transition-speed: 0.03s
   --fast-transition-speed: 0.1s
   --medium-transition-speed: 0.18s
   --normal-transition-speed: 0.25s
@@ -21,7 +22,7 @@
   font-size: 16px
 
 #app
-  background-color: var(--app-background-color)
+  background-color: var(--background-color)
   &.is-theme-transitioning, &.is-theme-transitioning *, &.is-theme-transitioning *::after, &.is-theme-transitioning *::before
     transition: color var(--long-transition-speed) var(--nice-transition-curve), background-color var(--long-transition-speed) var(--nice-transition-curve), border var(--long-transition-speed) var(--nice-transition-curve)
   &.is-theme-transitioning .colormodeswitch .switch
