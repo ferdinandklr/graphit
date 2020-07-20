@@ -1,0 +1,79 @@
+/* SF Pro Display */
+@font-face {
+  font-family: 'SFProDisplay';
+  src: url('SFProDisplay-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SFProDisplay';
+  src: url('SFProDisplay-Bold.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SFProDisplay';
+  src: url('SFProDisplay-Heavy.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SFProDisplay';
+  src: url('SFProDisplay-Black.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* SF Pro Text */
+@font-face {
+  font-family: 'SFProText';
+  src: url('SFProText-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SFProText';
+  src: url('SFProText-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SFProText';
+  src: url('SFProText-RegularItalic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'SFProText';
+  src: url('SFProText-Bold.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SFProText';
+  src: url('SFProText-Heavy.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* SF Pro Mono */
+@font-face {
+  font-family: 'SFMono';
+  src: url('SFMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SFMono';
+  src: url('SFMono-RegularItalic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
