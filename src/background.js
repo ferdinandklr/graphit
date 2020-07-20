@@ -27,7 +27,7 @@ function createWindow() {
     minWidth: 700,
     minHeight: 500,
     webPreferences: {
-      nodeIntegration: process.env.ELECTRON_NODE_INTEGRATION,
+      nodeIntegration: true,
       devtools: isDevelopment
     },
     useContentSize: true,
