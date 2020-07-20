@@ -1,5 +1,13 @@
+<!--
+  This file controls the entire app
+    -> global styling (palette, themes, ...)
+    -> display the right view
+-->
+
 <template>
   <div id="app" class="theme-light">
+
+    <!-- add a windows title bar -->
     <titlebar />
   </div>
 </template>
