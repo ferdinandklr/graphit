@@ -9,8 +9,19 @@
 
   --nice-transition-curve: ease-in-out
 
+*
+  font-family: 'SFProDisplay'
+  box-sizing: border-box
+  user-select: none
+  margin: 0
+  padding: 0
+  font-weight: 400
+  font-style: normal
+  color: var(--text)
+  font-size: 16px
+
 #app
-  background-color: var(--app-background)
+  background-color: var(--app-background-color)
   &.is-theme-transitioning, &.is-theme-transitioning *, &.is-theme-transitioning *::after, &.is-theme-transitioning *::before
     transition: color var(--long-transition-speed) var(--nice-transition-curve), background-color var(--long-transition-speed) var(--nice-transition-curve), border var(--long-transition-speed) var(--nice-transition-curve)
   &.is-theme-transitioning .colormodeswitch .switch
