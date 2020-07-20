@@ -16,7 +16,7 @@
 // import store
 import { theme } from '@/stores/AppState'
 
-// improt components
+// import components
 import Titlebar from '@/components/Titlebar'
 
 export default {
