@@ -5,7 +5,7 @@
 -->
 
 <template>
-  <div id="app" class="theme-light">
+  <div id="app" :class="{ 'theme-light': theme==='light', 'theme-dark': theme==='dark' }">
 
     <!-- add a windows title bar -->
     <titlebar />
@@ -13,12 +13,21 @@
 </template>
 
 <script>
+// import store
+import { theme } from '@/stores/AppState'
+
+// improt components
 import Titlebar from '@/components/Titlebar'
 
 export default {
   name: 'App',
   components: {
     titlebar: Titlebar
+  },
+  setup() {
+    return {
+      theme
+    }
   }
 }
 </script>
