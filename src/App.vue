@@ -9,7 +9,7 @@
 
     <!-- code related to windows -->
     <titlebar />
-    <div class="windowBorder"></div>
+    <window-border />
 
   </div>
 </template>
@@ -20,11 +20,13 @@ import { theme } from '@/stores/AppState'
 
 // import components
 import Titlebar from '@/components/Titlebar'
+import WindowBorder from '@/components/WindowBorder'
 
 export default {
   name: 'App',
   components: {
-    titlebar: Titlebar
+    titlebar: Titlebar,
+    'window-border': WindowBorder
   },
   setup() {
     return {
@@ -42,13 +44,4 @@ export default {
 @import "./assets/styling/general.sass"
 
 #app
-  .windowBorder
-    width: 100%
-    height: 100%
-    position: absolute
-    top: 0
-    left: 0
-    z-index: 100
-    pointer-events: none
-    border: solid 1px var(--window-border-color)
 </style>
