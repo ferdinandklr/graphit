@@ -11,6 +11,11 @@
     <titlebar />
     <window-border />
 
+    <!-- show the right view -->
+    <v-splitter>
+      <sidebar />
+    </v-splitter>
+
   </div>
 </template>
 
@@ -21,12 +26,18 @@ import { theme } from '@/stores/AppState'
 // import components
 import Titlebar from '@/components/Titlebar'
 import WindowBorder from '@/components/WindowBorder'
+// import HorizontalSplitter from '@/components/structure/HorizontalSplitter'
+import VerticalSplitter from '@/components/structure/VerticalSplitter'
+import Sidebar from '@/components/sidebar/Sidebar'
 
 export default {
   name: 'App',
   components: {
     titlebar: Titlebar,
-    'window-border': WindowBorder
+    'window-border': WindowBorder,
+    // 'h-splitter': HorizontalSplitter,
+    'v-splitter': VerticalSplitter,
+    sidebar: Sidebar
   },
   setup() {
     return {
@@ -42,6 +53,4 @@ export default {
 @import "./assets/styling/palette.sass"
 @import "./assets/styling/themes.sass"
 @import "./assets/styling/general.sass"
-
-#app
 </style>
