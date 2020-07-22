@@ -27,13 +27,12 @@ export default {
   .title
     font-family: SFProDisplay
     text-transform: uppercase
-    font-size: 20px
+    font-size: 25px
     letter-spacing: 3px
     font-weight: 700
-    background-color: blue
     width: 100%
-    height: 100px
+    height: 70px
     display: flex
     justify-content: center
-    align-content: center
+    align-items: center
 </style>
