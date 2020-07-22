@@ -42,12 +42,12 @@ var views = reactive({
 
 // ---- SIDEBAR ---- //
 // define the active sidebar subs of the app
-var sidebar_subs = ref(SIDEBAR_SUBS.MENU)
+var sidebar_active_sub = ref(SIDEBAR_SUBS.MENU)
 
 // ---- EXPORT ---- //
 export {
   theme,
   switchTheme,
   views,
-  sidebar_subs
+  sidebar_active_sub
 }
