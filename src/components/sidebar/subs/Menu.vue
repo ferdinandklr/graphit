@@ -4,7 +4,7 @@
 
 <template>
   <div class="menu">
-    <div class="menusub_view" :class="{ 'active': views.active===view.id , 'enable': view.enable }" v-for="view in views.views" :key="view.id">{{ view.name }}</div>
+    <div class="menusub_view" :class="{ 'active': views.active===view.id , 'enable': view.enable }" v-for="view in views.views" :key="view.id" @click="views.active=view.id">{{ view.name }}</div>
   </div>
 </template>
 
