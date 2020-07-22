@@ -9,13 +9,13 @@
     <!-- show the app's name  -->
     <div class="title">graphit</div>
     <!-- show the right subs -->
-    <sub-menu v-if="sidebar_subs === SIDEBAR_SUBS.MENU" />
+    <sub-menu v-if="sidebar_active_sub === SIDEBAR_SUBS.MENU" />
   </div>
 </template>
 
 <script>
 // import store data
-import { sidebar_subs } from '@/stores/AppState'
+import { sidebar_active_sub } from '@/stores/AppState'
 import { SIDEBAR_SUBS } from '@/constants'
 
 // import components
@@ -27,7 +27,7 @@ export default {
     'sub-menu': Menu
   },
   setup() {
-    return { SIDEBAR_SUBS, sidebar_subs }
+    return { SIDEBAR_SUBS, sidebar_active_sub }
   }
 }
 </script>
