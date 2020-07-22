@@ -1,5 +1,7 @@
 <template>
-  <div class="plot2d"></div>
+  <div class="plot2d">
+    <h1>2d plot view</h1>
+  </div>
 </template>
 
 <script>

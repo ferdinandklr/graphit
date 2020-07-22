@@ -7,7 +7,7 @@
 */
 
 import { ref, reactive } from 'vue'
-import { THEMES, SIDEBAR_SUBS, MENUSUB_VIEWS } from '@/constants'
+import { THEMES, SIDEBAR_SUBS, VIEWS } from '@/constants'
 
 // ---- THEMES ---- //
 // define the active theme of the app
@@ -18,24 +18,26 @@ ipcRenderer.on('os-theme-updated', (e, data) => { // eslint-disable-line
   theme.value = data === 'dark' ? THEMES.DARK : THEMES.LIGHT
 })
 
+// ---- VIEWS ---- //
+// define all the views of the app
+var views = reactive({
+  views: [
+    { id: VIEWS.TABLES, name: 'tables', enable: true },
+    { id: VIEWS.PLOT2D, name: '2d plot', enable: true },
+    { id: VIEWS.PLOT3D, name: '3d plot', enable: false },
+    { id: VIEWS.FOURRIER, name: 'fourrier', enable: false },
+    { id: VIEWS.CHARTS, name: 'charts', enable: false }
+  ],
+  active: VIEWS.TABLES
+})
+
 // ---- SIDEBAR ---- //
 // define the active sidebar subs of the app
 var sidebar_subs = ref(SIDEBAR_SUBS.MENU)
 
-var menu_sub = reactive({
-  views: [
-    { id: MENUSUB_VIEWS.TABLES, name: 'tables', enable: true },
-    { id: MENUSUB_VIEWS.PLOT2D, name: '2d plot', enable: true },
-    { id: MENUSUB_VIEWS.PLOT3D, name: '3d plot', enable: false },
-    { id: MENUSUB_VIEWS.FOURRIER, name: 'fourrier', enable: false },
-    { id: MENUSUB_VIEWS.CHARTS, name: 'charts', enable: false }
-  ],
-  active: MENUSUB_VIEWS.TABLES
-})
-
 // ---- EXPORT ---- //
 export {
   theme,
-  sidebar_subs,
-  menu_sub
+  views,
+  sidebar_subs
 }

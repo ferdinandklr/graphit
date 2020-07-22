@@ -11,10 +11,14 @@
     <titlebar />
     <window-border />
 
-    <!-- show the right view -->
+    <!-- spit the window -->
     <v-splitter>
       <!-- show the sidebar -->
       <sidebar />
+      <!-- show the right view -->
+      <tables v-if="views.active===VIEWS.TABLES"/>
+      <plot-2d v-if="views.active===VIEWS.PLOT2D"/>
+
     </v-splitter>
 
   </div>
@@ -22,10 +26,10 @@
 
 <script>
 // import constants
-import { THEMES } from '@/constants.js'
+import { THEMES, VIEWS } from '@/constants.js'
 
 // import store
-import { theme } from '@/stores/AppState'
+import { theme, views } from '@/stores/AppState'
 
 // import components
 import Titlebar from '@/components/Titlebar'
@@ -34,6 +38,10 @@ import WindowBorder from '@/components/WindowBorder'
 import VerticalSplitter from '@/components/structure/VerticalSplitter'
 import Sidebar from '@/components/sidebar/Sidebar'
 
+// import views
+import Tables from '@/views/Tables'
+import Plot2D from '@/views/Plot2D'
+
 export default {
   name: 'App',
   components: {
@@ -41,10 +49,12 @@ export default {
     'window-border': WindowBorder,
     // 'h-splitter': HorizontalSplitter,
     'v-splitter': VerticalSplitter,
-    sidebar: Sidebar
+    sidebar: Sidebar,
+    tables: Tables,
+    'plot-2d': Plot2D
   },
   setup() {
-    return { THEMES, theme }
+    return { THEMES, theme, VIEWS, views }
   }
 }
 </script>

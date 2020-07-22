@@ -4,18 +4,18 @@
 
 <template>
   <div class="menu">
-    <div class="menusub_view" :class="{ 'active': menu_sub.active===view.id , 'enable': view.enable }" v-for="view in menu_sub.views" :key="view.id">{{ view.name }}</div>
+    <div class="menusub_view" :class="{ 'active': views.active===view.id , 'enable': view.enable }" v-for="view in views.views" :key="view.id">{{ view.name }}</div>
   </div>
 </template>
 
 <script>
 // import the store
-import { menu_sub } from '@/stores/AppState'
+import { views } from '@/stores/AppState'
 
 export default {
   name: 'Menu',
   setup() {
-    return { menu_sub }
+    return { views }
   }
 }
 </script>

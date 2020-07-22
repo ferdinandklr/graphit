@@ -1,5 +1,7 @@
 <template>
-  <div class="tables"></div>
+  <div class="tables">
+    <h1>tables view</h1>
+  </div>
 </template>
 
 <script>

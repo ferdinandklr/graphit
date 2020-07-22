@@ -14,7 +14,7 @@ const SIDEBAR_SUBS = readonly({
 })
 
 // menu
-const MENUSUB_VIEWS = readonly({
+const VIEWS = readonly({
   TABLES: 'TABLES',
   PLOT2D: 'PLOT2D',
   PLOT3D: 'PLOT3D',
@@ -23,4 +23,4 @@ const MENUSUB_VIEWS = readonly({
 })
 
 /* ---- EXPORT ---- */
-export { THEMES, SIDEBAR_SUBS, MENUSUB_VIEWS }
+export { THEMES, SIDEBAR_SUBS, VIEWS }
