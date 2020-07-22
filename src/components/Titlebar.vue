@@ -1,3 +1,9 @@
+<!--
+  This file controls the titlebar look (only on windows)
+    -> interactive os buttons
+    -> drag zone
+-->
+
 <template>
   <div class="titlebar">
     <div class="minimize" @click="minimizeWindow"></div>
