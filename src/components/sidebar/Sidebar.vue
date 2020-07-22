@@ -8,8 +8,12 @@
   <div class="sidebar">
     <!-- show the app's name  -->
     <div class="title">graphit</div>
+
     <!-- show the right subs -->
     <sub-menu v-if="sidebar_subs === SIDEBAR_SUBS.MENU" />
+
+    <!-- add a button to switch the current theme -->
+    <change-theme-button />
   </div>
 </template>
 
@@ -20,11 +24,13 @@ import { SIDEBAR_SUBS } from '@/constants'
 
 // import components
 import Menu from '@/components/sidebar/subs/Menu'
+import ChangeThemeButton from '@/components/sidebar/ChangeThemeButton'
 
 export default {
   name: 'Sidebar',
   components: {
-    'sub-menu': Menu
+    'sub-menu': Menu,
+    'change-theme-button': ChangeThemeButton
   },
   setup() {
     return { SIDEBAR_SUBS, sidebar_subs }
