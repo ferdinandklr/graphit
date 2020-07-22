@@ -18,6 +18,15 @@ ipcRenderer.on('os-theme-updated', (e, data) => { // eslint-disable-line
   theme.value = data === 'dark' ? THEMES.DARK : THEMES.LIGHT
 })
 
+// switch the theme of the app
+function switchTheme() {
+  if (theme.value === THEMES.LIGHT) {
+    theme.value = THEMES.DARK
+  } else if (theme.value === THEMES.DARK) {
+    theme.value = THEMES.LIGHT
+  }
+}
+
 // ---- VIEWS ---- //
 // define all the views of the app
 var views = reactive({
@@ -38,6 +47,7 @@ var sidebar_active_sub = ref(SIDEBAR_SUBS.MENU)
 // ---- EXPORT ---- //
 export {
   theme,
+  switchTheme,
   views,
   sidebar_active_sub
 }
