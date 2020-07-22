@@ -38,6 +38,7 @@ export default {
   height: 100vh
   background-color: var(--panel-color)
   position: relative
+  flex-grow: 0
 
   .title
     font-family: SFProDisplay
