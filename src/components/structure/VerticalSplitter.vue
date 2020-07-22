@@ -13,7 +13,7 @@ export default {
 <style lang="sass">
 .v-splitter
   display: flex
-  flex-direction: column
+  flex-direction: row
   width: 100%
   height: 100%
 </style>

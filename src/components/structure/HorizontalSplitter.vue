@@ -13,7 +13,7 @@ export default {
 <style lang="sass">
 .h-splitter
   display: flex
-  flex-direction: row
+  flex-direction: column
   width: 100%
   height: 100%
 </style>
