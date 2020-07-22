@@ -5,7 +5,7 @@
 -->
 
 <template>
-  <div id="app" :class="{ 'theme-light': theme==='light', 'theme-dark': theme==='dark' }">
+  <div id="app" :class="{ 'theme-light': theme===THEMES.LIGHT, 'theme-dark': theme===THEMES.DARK }">
 
     <!-- code related to windows -->
     <titlebar />
@@ -13,6 +13,7 @@
 
     <!-- show the right view -->
     <v-splitter>
+      <!-- show the sidebar -->
       <sidebar />
     </v-splitter>
 
@@ -20,6 +21,9 @@
 </template>
 
 <script>
+// import constants
+import { THEMES } from '@/constants.js'
+
 // import store
 import { theme } from '@/stores/AppState'
 
@@ -40,9 +44,7 @@ export default {
     sidebar: Sidebar
   },
   setup() {
-    return {
-      theme
-    }
+    return { THEMES, theme }
   }
 }
 </script>

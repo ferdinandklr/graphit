@@ -9,12 +9,26 @@
     <!-- show the app's name  -->
     <div class="title">graphit</div>
     <!-- show the right subs -->
+    <sub-menu v-if="sidebar_subs === SIDEBAR_SUBS.MENU" />
   </div>
 </template>
 
 <script>
+// import store data
+import { sidebar_subs } from '@/stores/AppState'
+import { SIDEBAR_SUBS } from '@/constants'
+
+// import components
+import Menu from '@/components/sidebar/subs/Menu'
+
 export default {
-  name: 'Sidebar'
+  name: 'Sidebar',
+  components: {
+    'sub-menu': Menu
+  },
+  setup() {
+    return { SIDEBAR_SUBS, sidebar_subs }
+  }
 }
 </script>
 
@@ -23,6 +37,7 @@ export default {
   width: 250px
   height: 100vh
   background-color: var(--panel-color)
+  position: relative
 
   .title
     font-family: SFProDisplay
@@ -35,4 +50,7 @@ export default {
     display: flex
     justify-content: center
     align-items: center
+    position: absolute
+    top: 0
+    left: 0
 </style>
